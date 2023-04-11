@@ -1,0 +1,24 @@
+int Botao = 0; 
+int Botao1 = 1;
+int LEDamarelo = 2;
+int LEDverde = 3;
+int LEDazul = 4;
+int estadoBotao = 0;
+int estadoBotao1 = 0;
+
+void setup(){
+  pinMode(Botao, INPUT); 
+  pinMode(Botao1, INPUT); 
+  pinMode(LEDamarelo, OUTPUT);
+  pinMode(LEDverde, OUTPUT);
+  pinMode(LEDazul, OUTPUT);
+    
+}
+
+void loop(){
+   estadoBotao = digitalRead(Botao);
+   estadoBotao1 = digitalRead(Botao1);
+   digitalWrite(LEDamarelo, estadoBotao&estadoBotao1); 
+   digitalWrite(LEDverde, estadoBotao|estadoBotao1);
+   digitalWrite(LEDazul, estadoBotao^estadoBotao1);
+ }
