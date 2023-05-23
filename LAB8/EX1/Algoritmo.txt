@@ -1,0 +1,19 @@
+Inicialize as variáveis:
+
+delayTime com um valor inicial (por exemplo, 100) - representa o tempo de atraso entre cada mudança de estado dos LEDs.
+reverse como false - indica o sentido inicial dos LEDs.
+Configure os pinos dos LEDs como saída.
+
+Configure o pino do potenciômetro como entrada analógica.
+
+Configure o pino do botão como entrada digital e habilite o resistor.
+
+
+Dentro do loop principal:
+
+Leia o valor do potenciômetro e mapeie-o para o intervalo desejado para delayTime.
+Verifique se o botão foi pressionado. Se sim, inverta o valor de reverse.
+Percorra os LEDs em sequência:
+Verifique se o tempo atual (obtido por millis()) é maior que o tempo armazenado em currentMillis para aquele LED.
+Se for, alterne o estado do LED (de ligado para desligado ou vice-versa).
+Repita o loop principal.
